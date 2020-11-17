@@ -1,0 +1,52 @@
+<odoo>
+  <data>
+    <record id="view_modal" model="ir.ui.view">
+        <field name="name">End User License Agreement </field>
+        <field name="model">webcoop.eula</field>
+        <field name="arch" type="xml">
+            <form>
+                
+                <!-- <field name="state" invisible="1"/> -->
+                <group >
+                    <div>
+                     <p>
+                     By accessing "Alliance WebCoop" (hereinafter "we", "us", "our", "Alliance"), you agree 
+                     to be legally bound by the following terms. Please be informed that we may change 
+                     the terms at any time and we'll do our utmost in informing you, though it would be 
+                     prudent to review this regularly yourself as your continued usage of our site after 
+                     changes mean you agree to be legally bound by these terms as they are updated 
+                     and/or amended. Your IP address is recorded with us to monitor your activities. In 
+                     case of any violation, you agree that Alliance WebCoop have the right to remove, edit, 
+                     move or close any information at any time should we see fit. As a user, you are 
+                     responsible for any information you have entered in our database. While this 
+                     information will not be disclosed to any third party without your consent, we shall not 
+                     be held responsible for any hacking attempt that may lead to the data being 
+                     compromised.
+                    </p>
+                    
+                    </div>
+                </group> 
+                <footer >
+                    <button string="I Accept" name="accept_eula" type="object" class="btn-primary" />
+                    <a href="#" onclick="window.open('/web/eula_long/', '_blank')" style="float:right;">(Alliance WebCoop - Subscription License Agreement)</a>
+                </footer>
+            </form>
+        </field>
+    </record>
+   
+
+    <record model="ir.actions.act_window" id="eula.action_modal">
+        <field name="name">End User License Agreement </field>
+        <field name="res_model">webcoop.eula</field>
+        <field name="view_mode">form</field>
+
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+
+   
+  </data>
+</odoo>

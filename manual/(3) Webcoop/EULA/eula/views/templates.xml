@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="agreement">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="oe_structure oe_empty">
+                        <div class="container">
+                        <style> .modal{
+   								 display: block !important; /* I added this to see the modal, you don't need this */
+								}
+								
+								/* Important part */
+								.modal-dialog{
+								    overflow-y: initial !important
+								}
+								.modal-body{
+								    height: 250px;
+								    overflow-y: auto;
+								}
+								</style>
+                       
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                    
+                                    
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle"><strong>EULA</strong></h5>
+                                        </div>
+                                        <div class="modal-body">  
+                                            <b>
+                                            End User License Agreement 
+                                            </b>
+                                            <p>
+                                            
+                                            By accessing "Alliance WebCoop" (hereinafter "we", "us", "our", "Alliance"), you agree to be legally bound by the following terms. Please be informed that we may change the terms at any time and 
+                                            we'll do our utmost in informing you, though it would be prudent to review this regularly yourself as your continued usage of our site after changes mean you agree to be legally bound by these terms 
+                                            as they are updated and/or amended. Your IP address is recorded with us to monitor your activities. In case of any violation, you agree that Alliance WebCoop have the right to remove, edit, move or 
+                                            close any information at any time should we see fit. As a user, you are responsible for any information you have entered in our database. While this information will not be disclosed to
+                                            any third party without your consent, we shall not be held responsible for any hacking attempt that may lead to the data being compromised.
+                                           </p>
+                                           
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="button" class="btn btn-success" data-dismiss="modal">Accept</button>
+                                            <a href="/web/eula_long/">(EULA LONG VERSION LINK........) </a>
+                                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                $('#exampleModalCenter').modal({
+                                    show: true,
+                                    keyboard: false,
+                                    backdrop: 'static'
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <!-- <template id="listing"> -->
+        <!--   <ul> -->
+        <!--     <li t-foreach="objects" t-as="object"> -->
+        <!--       <a t-attf-href="#{ root }/objects/#{ object.id }"> -->
+        <!--         <t t-esc="object.display_name"/> -->
+        <!--       </a> -->
+        <!--     </li> -->
+        <!--   </ul> -->
+        <!-- </template> -->
+        <!-- <template id="object"> -->
+        <!--   <h1><t t-esc="object.display_name"/></h1> -->
+        <!--   <dl> -->
+        <!--     <t t-foreach="object._fields" t-as="field"> -->
+        <!--       <dt><t t-esc="field"/></dt> -->
+        <!--       <dd><t t-esc="object[field]"/></dd> -->
+        <!--     </t> -->
+        <!--   </dl> -->
+        <!-- </template> -->
+    </data>
+</odoo>
